@@ -9,12 +9,9 @@ A production-ready machine learning pipeline template with versioned studies, in
 3. [Template Options](#template-options)
 4. [Project Structure](#project-structure)
 5. [Framework Architecture](#framework-architecture)
-6. [Getting Started Guide](#getting-started-guide)
-7. [Examples & Use Cases](#examples--use-cases)
-8. [Configuration Reference](#configuration-reference)
-9. [Best Practices](#best-practices)
+6. [Best Practices](#best-practices)
 
-## 🎯 Overview
+## Overview
 
 This framework follows three main steps in the pipeline: **preprocess**, **training**, and **inference**. The design is flexible, allowing users to choose and implement their own logic for each step. The template is suitable for both classical machine learning and deep learning workflows, and is intended for research and experimentation rather than production.
 
@@ -38,7 +35,7 @@ pip install cookiecutter
 cookiecutter https://github.com/ItamarEfrati/PipeLion.git --directory ml-project
 ```
 
-## 🛠️ Template Options
+## Template Options
 
 The template includes a very simple example pipeline. To use the example, first run the sample data generation script provided in the template. This will create example data for you to explore the pipeline. The example implementation demonstrates the full pipeline (preprocess, training, inference) and is intended for research and learning—not for production use. When generating the template, you can choose to include or exclude these examples.
 
@@ -51,7 +48,7 @@ The template includes a very simple example pipeline. To use the example, first 
 - Only the abstract base classes and core structure
 - No sample data or example implementations
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ml_project/
@@ -148,7 +145,7 @@ ml_project/
 - ✅ **Always included** - Core framework files
 - 🎯 **Examples only** - Included when `include_examples: "yes"`
 
-## 🏗️ Framework Architecture
+## Framework Architecture
 
 The framework is organized around abstract modules for each pipeline step: preprocess, training, and inference. Each module provides a base interface, and you are free to implement your own logic for any step. You can use any ML or deep learning library (e.g., scikit-learn, PyTorch, TensorFlow) and design your own workflow. The framework does not enforce any specific algorithm or data format—it's up to you to decide how to structure your pipeline.
 
@@ -159,7 +156,7 @@ The framework is organized around abstract modules for each pipeline step: prepr
 
 You choose what to implement and how to connect the steps. The framework provides the structure and flexibility for research workflows.
 
-## 🏆 Best Practices
+## Best Practices
 
 ### 1. **Configuration Management**
 - Keep configs small and focused
