@@ -1,6 +1,6 @@
 # 🚀 Cookiecutter ML Pipeline Template
 
-A production-ready machine learning pipeline template with versioned studies, inference capabilities, and flexible architecture designed for both beginners and experienced practitioners.
+A machine learning pipeline template for starting a machine learning projects including preprocessing, model selection and training, and model inference.
 
 ## 📋 Table of Contents
 
