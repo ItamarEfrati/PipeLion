@@ -1,6 +1,7 @@
 import logging
 import multiprocessing
 import os
+import sys
 
 import hydra
 from omegaconf import DictConfig
@@ -16,6 +17,10 @@ def main(cfg: DictConfig) -> None:
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
+
+    root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    os.chdir(root)
+    sys.path.append(str(root))
     
     orchestrator = Orchestrator(cfg)
     run_mode = cfg.get('run_mode', 'full')
