@@ -1,0 +1,19 @@
+# ExampleDataLoader Configuration
+# Updated for SimpleFeatureArranger output format
+
+_target_: src.training.dataloaders.example_dataloader.ExampleDataLoader
+
+# Basic configuration
+version: "Source_C"
+is_inference: true  # Set to true for inference mode, false for training mode
+seed: 42
+
+# File names (data directory is automatically determined by is_inference)
+features_file: "features.csv"
+labels_file:  # No labels for inference
+metadata_file: "metadata.csv"  # Contains hierarchy columns (source, hierarchy_1, hierarchy_2)
+
+# Data splitting (only used when is_inference=false)
+train_split: 
+test_split: 
+shuffle: 

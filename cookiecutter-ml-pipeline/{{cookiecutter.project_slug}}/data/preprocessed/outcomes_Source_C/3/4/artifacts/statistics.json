@@ -1,0 +1,13 @@
+{
+  "source": "Source_C",
+  "hierarchy_1": "3",
+  "hierarchy_2": "4",
+  "summary_features": {
+    "mean_of_means": 29.635632500869146,
+    "std_of_means": 30.09780397197775,
+    "mean_of_stds": 8.363263829534011,
+    "overall_range": 99.54431841922768,
+    "correlation_matrix_trace": 6.0,
+    "total_variance": 556.2629124551693
+  }
+}

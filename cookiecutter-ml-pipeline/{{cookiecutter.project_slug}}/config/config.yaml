@@ -1,0 +1,13 @@
+defaults:
+  - _self_
+  - hydra: default
+  - preprocess: 
+  - study: 
+  - dataloader: 
+  - inference: 
+
+# Simple configuration with default settings
+# Use example_config.yaml for more detailed configuration
+
+# Execution settings
+run_mode:   # Options: preprocess, train, preprocess_and_train, inference, preprocess_and_inference

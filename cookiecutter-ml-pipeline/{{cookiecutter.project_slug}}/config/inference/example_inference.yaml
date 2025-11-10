@@ -1,0 +1,12 @@
+# Example Inference Configuration
+# This configures the InferenceHandler with versioned study structure
+
+_target_: src.inference.example_inference.ExampleInferenceHandler
+
+# Versioned study structure
+study_name: "example_study"  # Name of the study (folder in assets/results/)
+version: "ver_1"               # Version of the study (e.g., "ver_1", "ver_2")
+inference_source_name: "Source C"  # Name of the inference source (folder in results/study_name/version/inference/)
+
+# Model configuration
+model_filename: "best_model.pkl"  # Name of the model file in the version directory

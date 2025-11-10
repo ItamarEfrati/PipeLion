@@ -1,0 +1,12 @@
+defaults:
+  - _self_
+  - preprocess: example_preprocess_train
+  - study: example_study
+  - dataloader: example_dataloader_train
+  - inference: 
+
+# Simple configuration with default settings
+# Use example_config.yaml for more detailed configuration
+
+# Execution settings
+run_mode: preprocess_and_train  # Options: preprocess, train, preprocess_and_train, inference, preprocess_and_inference

@@ -1,0 +1,24 @@
+# Core framework dependencies
+hydra-core>=1.2.0
+omegaconf>=2.2.0
+
+# Data processing and ML
+pandas>=1.4.0
+numpy>=1.21.0
+scikit-learn>=1.1.0
+optuna>=3.0.0
+
+# Logging and utilities
+pyyaml>=6.0
+
+# Optional: Add specific dependencies for your use case
+# torch>=1.12.0  # For PyTorch models
+# tensorflow>=2.8.0  # For TensorFlow models
+# xgboost>=1.6.0  # For XGBoost models
+# lightgbm>=3.3.0  # For LightGBM models
+
+# Development dependencies (optional)
+# pytest>=7.0.0
+# black>=22.0.0
+# flake8>=4.0.0
+# mypy>=0.950

@@ -1,0 +1,38 @@
+# DataProcessor Configuration
+# The DataProcessor handles queue initialization and microservice management
+data_processor:
+  _target_: src.preprocess.data_processor.DataProcessor
+  _partial_: true
+  source_list: [Source_C]  # List of data sources to process (should match feature_arranger.sources)
+  source_sample: null               # For debugging specific samples (optional)
+  feature_arranger:                 # Feature arrangement configuration
+    _target_: src.preprocess.feature_arrangement.example_feature_arranger.ExampleFeatureArranger
+    sources: [Source_C]  # List of data sources to process (should match data_processor.source_list)
+    feature_types: ["feature_engineer"]  # List of feature types to combine
+    label_file_path:  # No labels for inference
+    description: "Simple feature arrangement with fixed hierarchy structure"
+    n_workers: 1
+
+# Microservices Configuration
+# Define the processing pipeline with microservices
+# Statistics Calculator - First stage: Calculate statistics and save artifacts
+statistics_calculation:
+  share_input: true
+  statistics_calculator_n_threads: 1
+  statistics_calculator:
+    _target_: src.preprocess.micro_services.StatisticsCalculator
+    hierarchy_level: 2              # Process at hierarchy_2 level
+    input_folder: "raw_data"        # Read from raw data
+    feed_output_queue_automatically: true
+
+# Feature Engineering - Second stage: Read artifacts and generate features
+feature_engineering:
+  share_input: true
+  feature_engineer_n_threads: 1
+  feature_engineer:
+    _target_: src.preprocess.micro_services.FeatureEngineer
+    hierarchy_level: 2              # Process at hierarchy_2 level
+    input_folder: "preprocessed"        # Read from preprocessed data
+    feed_output_queue_automatically: false
+    n_random_features: 10           # Number of random features to generate
+

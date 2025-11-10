@@ -1,0 +1,37 @@
+{
+  "creation_date": "2025-11-10T02:57:15.161812",
+  "description": "Simple feature arrangement with fixed hierarchy structure",
+  "sources": [
+    "Source_C"
+  ],
+  "feature_types": [
+    "feature_engineer"
+  ],
+  "n_samples": 15,
+  "n_features": 10,
+  "feature_columns": [
+    "feature_engineer_random_feature_1",
+    "feature_engineer_random_feature_2",
+    "feature_engineer_random_feature_3",
+    "feature_engineer_random_feature_4",
+    "feature_engineer_random_feature_5",
+    "feature_engineer_random_feature_6",
+    "feature_engineer_random_feature_7",
+    "feature_engineer_random_feature_8",
+    "feature_engineer_random_feature_9",
+    "feature_engineer_random_feature_10",
+    "source",
+    "hierarchy_1",
+    "hierarchy_2"
+  ],
+  "index_columns": [
+    "source",
+    "hierarchy_1",
+    "hierarchy_2"
+  ],
+  "has_labels": false,
+  "is_inference": true,
+  "label_file_path": null,
+  "hierarchy_structure": "source -> hierarchy_1 -> hierarchy_2",
+  "filename_convention": "hierarchy_1_hierarchy_2_feature_type.csv"
+}

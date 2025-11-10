@@ -1,0 +1,5 @@
+{
+    "project_slug": "ml_pipeline_project",
+    "include_examples": ["yes", "no"],
+    "is_vscode_ide": ["yes", "no"]
+}

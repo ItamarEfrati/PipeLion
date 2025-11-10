@@ -1,0 +1,16 @@
+# Base study configuration
+_target_: src.training.hyperparameters_tuning.user_studies.example_study.ExampleStudy
+
+# Study parameters
+study_name: "example_study"
+direction: "maximize"
+optimize_metric: "accuracy"
+n_trials: 50
+n_jobs: 1
+cv: 5
+seed: 42
+
+# Sampler configuration
+sampler:
+  _target_: optuna.samplers.TPESampler
+  seed: 42
