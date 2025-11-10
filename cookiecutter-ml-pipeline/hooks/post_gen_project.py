@@ -99,7 +99,7 @@ def main():
     
     # Remove .vscode folder if not using VS Code
     if is_vscode_ide == "no":
-        vscode_path = Path.cwd() / ".vscode"
+        vscode_path = Path.cwd().joinpath(".vscode")
         if vscode_path.exists() and vscode_path.is_dir():
             shutil.rmtree(vscode_path)
             print("Removed .vscode folder (not using VS Code)")
@@ -117,9 +117,9 @@ def main():
     
     if include_examples == "yes":
         print("\n📚 Examples included - you can run the example right away!")
-            print(f"   cd {project_slug}")
-            print("   pip install -r requirements.txt")
-            print("   python src/main.py")
+        print(f"   cd {project_slug}")
+        print("   pip install -r requirements.txt")
+        print("   python src/main.py")
     else:
         print("\n🏗️  Clean template created - implement your custom classes:")
         print("   - Extend abstract classes in src/inference/ and src/training/")
@@ -128,9 +128,9 @@ def main():
         print("   - Add your data processing logic")
         
         print("\n📋 Next steps:")
-            print(f"   cd {project_slug}")
-            print("   pip install -r requirements.txt")
-            print("   # Implement your custom classes and configurations")
+        print(f"   cd {project_slug}")
+        print("   pip install -r requirements.txt")
+        print("   # Implement your custom classes and configurations")
 
 
 if __name__ == "__main__":
